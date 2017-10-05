@@ -2,6 +2,8 @@ require_relative "menu"
 require_relative "order"
 require_relative "pizza"
 
+menu = Menu.new
+
 done = false
 
 puts "Hello, welcome to our pizza express delivery"
@@ -18,6 +20,7 @@ while not done
   case choice
     when 1
       puts "Let me show you the menu"
+      menu.print
     when 2
       done = true
     else
